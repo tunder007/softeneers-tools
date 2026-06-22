@@ -1,0 +1,59 @@
+{
+  "name": "softeneers-tools",
+  "version": "1.0.0",
+  "description": "One front door to the Softeneers tools — list, run and wire in 13 zero-dependency AI/dev CLIs through a single command.",
+  "type": "module",
+  "bin": {
+    "softeneers-tools": "./bin/softeneers-tools.mjs"
+  },
+  "scripts": {
+    "test": "node scripts/self-test.mjs",
+    "self-test": "node scripts/self-test.mjs",
+    "link-local": "node scripts/link-local.mjs"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "keywords": [
+    "cli",
+    "softeneers",
+    "ai",
+    "claude",
+    "cursor",
+    "toolkit",
+    "skills",
+    "developer-tools"
+  ],
+  "author": "Softeneers <damian.tudor03@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@softeneers/deterministic-checker": "^1.0.0",
+    "@softeneers/workspace-optimizer": "^1.0.0",
+    "@softeneers/feature-structure-creator": "^1.0.0",
+    "@softeneers/vercel-deploy": "^1.0.0",
+    "@softeneers/railway-deploy": "^1.0.0",
+    "@softeneers/github-sync": "^1.0.0",
+    "@softeneers/design-language": "^1.0.0",
+    "@softeneers/oss-track": "^1.0.0",
+    "@softeneers/distribution": "^1.0.0",
+    "@softeneers/project-benchmark": "^1.0.0",
+    "@softeneers/creator": "^1.0.0",
+    "@softeneers/doctor": "^1.0.0",
+    "@softeneers/linearizer": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tunder007/softeneers-tools.git"
+  },
+  "homepage": "https://github.com/tunder007/softeneers-tools#readme",
+  "bugs": {
+    "url": "https://github.com/tunder007/softeneers-tools/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
