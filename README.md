@@ -1,8 +1,8 @@
 # softeneers-tools
 
-> One front door to the **Softeneers tools** — list, run and wire in 13 zero-dependency AI/dev CLIs through a single command.
+> One front door to the **Softeneers tools** — list, run and wire in 14 zero-dependency AI/dev CLIs through a single command.
 
-`npm install softeneers-tools` pulls in all 13 tools as dependencies and gives you one binary that
+`npm install softeneers-tools` pulls in all 14 tools as dependencies and gives you one binary that
 discovers, runs and installs them. Each tool is also published standalone under `@softeneers/*` if
 you only want one.
 
@@ -45,19 +45,20 @@ Everything after `--` is passed straight through to the underlying tool.
 | `vercel-deploy` | `@softeneers/vercel-deploy` | Guard-railed Vercel deploys (preview by default) |
 | `railway-deploy` | `@softeneers/railway-deploy` | Dry-run-by-default Railway deploys + secret scan |
 | `github-sync` | `@softeneers/github-sync` | Safe gh branch/PR flow with standard conventions |
-| `design-language` | `@softeneers/design-language` | Design tokens → CSS generator + token linter |
+| `design-language` | `@softeneers/design-language` | Interactive design.html (HSL :root) + DESIGN.md: create/get/edit/apply/preview |
 | `oss-track` | `@softeneers/oss-track` | Score a repo against an open-source checklist |
 | `distribution` | `@softeneers/distribution` | Distribute skills to ~/.claude / ~/.cursor or a template |
 | `project-benchmark` | `@softeneers/project-benchmark` | 10-dimension project maturity benchmark |
 | `creator` | `@softeneers/creator` | Scaffold a new cross-tool AI skill |
 | `doctor` | `@softeneers/doctor` | Validate skills against the toolkit standard |
 | `linearizer` | `@softeneers/linearizer` | Flatten a repo's AI-source into one token-budgeted bundle |
+| `handoff` | `@softeneers/handoff` | Write a structured handoff.md before /clear so a fresh agent resumes losslessly |
 
 Run `softeneers-tools list` to see which are installed (`●`) vs not (`○`).
 
 ## How it works
 
-The wrapper keeps a registry of the 13 tools. For each command it resolves the tool's package from
+The wrapper keeps a registry of the 14 tools. For each command it resolves the tool's package from
 your `node_modules`, finds the right `bin`, and dispatches to it with your arguments — so the wrapper
 itself stays tiny and every tool remains independently versioned and usable on its own. If a tool
 isn't installed, the wrapper tells you exactly how to add it instead of failing opaquely.

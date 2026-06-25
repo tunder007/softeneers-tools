@@ -16,7 +16,7 @@ const run = (...args) => spawnSync(process.execPath, [BIN, ...args], { encoding:
 console.log("\nsofteneers-tools — self-test\n");
 
 console.log("Registry");
-ok(REGISTRY.length === 13, `13 tools registered (${REGISTRY.length})`);
+ok(REGISTRY.length === 14, `14 tools registered (${REGISTRY.length})`);
 ok(new Set(REGISTRY.map((t) => t.slug)).size === REGISTRY.length, "all slugs unique");
 ok(new Set(REGISTRY.map((t) => t.pkg)).size === REGISTRY.length, "all package names unique");
 ok(REGISTRY.every((t) => t.pkg.startsWith("@softeneers/")), "every package is @softeneers-scoped");
@@ -27,7 +27,7 @@ ok(findTool("nope") === undefined, "findTool returns undefined for unknown slug"
 console.log("CLI surface");
 const list = run("list");
 ok(list.status === 0, "`list` exits 0");
-ok(/13 tools/.test(list.stdout), "`list` reports 13 tools");
+ok(/14 tools/.test(list.stdout), "`list` reports 14 tools");
 ok(REGISTRY.every((t) => list.stdout.includes(t.slug)), "`list` shows every slug");
 
 const help = run("help");
